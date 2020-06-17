@@ -1,0 +1,6 @@
+﻿--<thm>--
+
+type : checkbox
+
+background : checkbox
+background-checked : checkbox_checked
