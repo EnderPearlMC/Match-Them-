@@ -1,0 +1,11 @@
+﻿--<thm>--
+
+type : button
+
+background : button
+background-hover : button_hover
+background-pressed : button
+
+font : main_font
+
+sound-hover : snd_button_hover
