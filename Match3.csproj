@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9B8BBE4-19CF-4856-8D00-C903C659EC10}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Match3</RootNamespace>
+    <AssemblyName>Match3</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;LINUX</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;LINUX</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CodeEasier\GameSystems\CEGame.cs" />
+    <Compile Include="CodeEasier\Polish\CEParticle.cs" />
+    <Compile Include="CodeEasier\Polish\CEParticleEmitter.cs" />
+    <Compile Include="CodeEasier\Polish\CETransition.cs" />
+    <Compile Include="CodeEasier\Scene\CEImageElement.cs" />
+    <Compile Include="CodeEasier\Scene\CEScene.cs" />
+    <Compile Include="CodeEasier\Scene\CESpriteElement.cs" />
+    <Compile Include="CodeEasier\Scene\CETextElement.cs" />
+    <Compile Include="CodeEasier\Scene\ICESceneDrawable.cs" />
+    <Compile Include="CodeEasier\Scene\UI\CEUI.cs" />
+    <Compile Include="CodeEasier\Scene\UI\CEUIButton.cs" />
+    <Compile Include="CodeEasier\Scene\UI\CEUICheckBox.cs" />
+    <Compile Include="CodeEasier\Scene\UI\CEUITextScroller.cs" />
+    <Compile Include="CodeEasier\Utils.cs" />
+    <Compile Include="CodeEasier\Window\CEWindowMode.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Match3\Assets.cs" />
+    <Compile Include="Match3\Datas\DataManager.cs" />
+    <Compile Include="Match3\Datas\Level.cs" />
+    <Compile Include="Match3\Datas\LevelsData.cs" />
+    <Compile Include="Match3\Datas\Player.cs" />
+    <Compile Include="Match3\Langs.cs" />
+    <Compile Include="Match3\Levels\Forces\Force.cs" />
+    <Compile Include="Match3\Levels\Forces\ForceStorm.cs" />
+    <Compile Include="Match3\Levels\Forces\ForceAxe.cs" />
+    <Compile Include="Match3\Levels\Select\LevelSelect.cs" />
+    <Compile Include="Match3\Levels\Tiles\Tile.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileTwoDot.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileOneDot.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileNum5.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileNum4.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileNum3.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileNum2.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileNum1.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileTwoLinesH.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileThreeLines.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileFourDot.cs" />
+    <Compile Include="Match3\Levels\Tiles\TileSquare.cs" />
+    <Compile Include="Match3\MainGame.cs" />
+    <Compile Include="Match3\Polish\Emitters\EmitterCircle.cs" />
+    <Compile Include="Match3\Polish\Emitters\EmitterFallingTiles.cs" />
+    <Compile Include="Match3\Polish\Emitters\EmitterBirds.cs" />
+    <Compile Include="Match3\Polish\Emitters\EmitterLevelTexts.cs" />
+    <Compile Include="Match3\Polish\Emitters\EmitterStars.cs" />
+    <Compile Include="Match3\Polish\Emitters\EmitterXP.cs" />
+    <Compile Include="Match3\Polish\Emitters\EmitterLForce.cs" />
+    <Compile Include="Match3\Polish\Emitters\EmitterL.cs" />
+    <Compile Include="Match3\References.cs" />
+    <Compile Include="Match3\Scenes\SceneLevel.cs" />
+    <Compile Include="Match3\Scenes\SceneSelectLevel.cs" />
+    <Compile Include="Match3\Scenes\SceneSplashScreen.cs" />
+    <Compile Include="Match3\Scenes\SceneWin.cs" />
+    <Compile Include="Match3\Scenes\SceneMainMenu.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+    <EmbeddedResource Include="Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\SDL2.dll">
+      <Link>x86\SDL2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\SDL2.dll">
+      <Link>x64\SDL2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\soft_oal.dll">
+      <Link>x86\soft_oal.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\soft_oal.dll">
+      <Link>x64\soft_oal.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libSDL2-2.0.so.0">
+      <Link>x86\libSDL2-2.0.so.0</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libSDL2-2.0.so.0">
+      <Link>x64\libSDL2-2.0.so.0</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\libopenal.so.1">
+      <Link>x86\libopenal.so.1</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libopenal.so.1">
+      <Link>x64\libopenal.so.1</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libSDL2-2.0.0.dylib">
+      <Link>libSDL2-2.0.0.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libopenal.1.dylib">
+      <Link>libopenal.1.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll.config">
+      <Link>MonoGame.Framework.dll.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="CodeEasier\themes\button_theme_1.thm" />
+    <None Include="CodeEasier\themes\checkbox_theme_1.thm" />
+    <None Include="Match3\themes\button_theme_1.thm" />
+    <None Include="Match3\themes\checkbox_theme_1.thm" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
